@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo Glass Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Base Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Glass Effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Button */
+    .button {
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 126, 179, 0.5);
+    }
+
+    /* Grid Layout */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      padding: 2rem;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Light Mode */
+    @media (prefers-color-scheme: light) {
+      body {
+        background: #f0f0f3;
+        color: #333;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(200, 200, 200, 0.3);
+      }
+
+      .button {
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        color: #fff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="glass header">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Designer | Developer | Dreamer</p>
+    <button class="button">Get in Touch</button>
+  </header>
+
+  <section class="grid container">
+    <div class="card glass">
+      <h2>💡 Project One</h2>
+      <p>A modern web application built with cutting-edge technologies.</p>
+    </div>
+    <div class="card glass">
+      <h2>📊 Project Two</h2>
+      <p>Data visualization and dashboard for business analytics.</p>
+    </div>
+    <div class="card glass">
+      <h2>🔐 Project Three</h2>
+      <p>Authentication and security platform using OAuth2.</p>
+    </div>
+  </section>
+
+  <footer class="glass footer">
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
